@@ -1,0 +1,25 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\WorkExperience>
+ */
+class WorkExperienceFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition()
+    {
+        return [
+            'company' => $this->faker->company(),
+            'job_title' => $this->faker->jobTitle(),
+            'excerpt' => $this->faker->paragraph,
+        ];
+    }
+}
